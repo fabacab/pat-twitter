@@ -1,0 +1,19 @@
+; This is a sample configuration file intended mostly for development purposes.
+;
+; This file uses "init file" formatting. To learn more about the syntax of this
+; file, please refer to the PHP manual:
+;
+;     http://php.net/parse_ini_file
+;
+;<?php
+; exit('Direct access to this file is prohibited.');
+;// EDIT BELOW THESE LINES.
+;/*
+
+consumer_key    = "YOUR_CONSUMER_KEY_HERE"
+consumer_secret = "YOUR_CONSUMER_KEY_HERE"
+database_url    = "postgres://YOUR_PSQL_USER@YOUR_DB_HOST/YOUR_DB_NAME"
+theme_folder    = "default"
+
+;*/
+;?>

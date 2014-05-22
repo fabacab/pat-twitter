@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # This is a portable way to rewrite URLs. See:
+    # http://www.zeilenwechsel.de/it/articles/8/Using-mod_rewrite-in-.htaccess-files-without-knowing-the-RewriteBase.html
+    RewriteBase /
+    # We're only interested in working around this Tampermonkey bug:
+    # https://code.google.com/p/tampermonkey/issues/detail?id=187
+    # so we're only interested in applying this to requests for the userscript.
+    RewriteCond %{REQUEST_URI} predator-alert-tool-for-twitter.user.js
+    RewriteCond $1#%{REQUEST_URI} ([^#]*)#(.*)\1$
+    RewriteRule ^(.*)$ %2index.php?action=download&what=userscript [QSA,L]
+</IfModule>

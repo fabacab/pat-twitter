@@ -1,0 +1,23 @@
+.visuallyhidden {
+    display: none;
+}
+.notices {
+    border: 1px dotted;
+}
+.actions li {
+    display: inline-block;
+}
+.actions li:not(:last-child)::after {
+    content: " | ";
+}
+textarea {
+    width: 75%;
+    min-height: 6em;
+}
+.helptext {
+    color: #666;
+    font-size: smaller;
+}
+
+footer { font-size: 75%; margin: 0; padding: 0 15px; border: 1px dotted #000;}
+footer p { margin: 1em 0; padding: 0; }

@@ -1,0 +1,9 @@
+[submodule "lib/twitter-api-php"]
+	path = lib/twitter-api-php
+	url = https://github.com/J7mbo/twitter-api-php.git
+[submodule "lib/pat-twitter/userscript/oauth-1.0a"]
+	path = lib/pat-twitter/userscript/oauth-1.0a
+	url = https://github.com/ddo/oauth-1.0a.git
+[submodule "lib/pat-twitter/Parsedown"]
+	path = lib/pat-twitter/Parsedown
+	url = https://github.com/erusev/parsedown.git
