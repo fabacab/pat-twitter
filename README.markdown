@@ -62,12 +62,27 @@ Predator Alert Tool for Twitter ships with an extremely simple template called "
 
 If you want to change the look and feel of your facilitator, you can copy this template (located in the app's `themes/` folder), modify it, and set the `PAT_TWITTER_THEME_FOLDER` environment variable to your new folder's name.
 
-Finally, [provision a database for your facilitator](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on):
+Next, [provision a database for your facilitator](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on):
 
     heroku addons:add heroku-postgresql:dev
 
 (Note that [Heroku's free database tier has certain limitations](https://devcenter.heroku.com/articles/heroku-postgres-plans). If you plan to run a fully public or popular Predator Alert Tool for Twitter facilitator, I recommend you move to a production-grade plan. Alternatively, you can run the server on most standard Web hosting plans.)
 
+Finally, [deploy your app to Heroku](https://devcenter.heroku.com/articles/git#deploying-code):
+
+    git push heroku master
+
 You can navigate to your app by using the `heroku open` command. This should open your default browser and present you with a login screen.
 
 Congratulations. You are now a Predator Alert Tool for Twitter facilitator. Share the URL of your app with anyone you want to and [encourage them to break the silence around and cycle of abuse](https://github.com/meitar/pat-facebook/wiki/How-to-help).
+
+## Updating a facilitator when new Predator Alert Tool for Twitter versions are released
+
+New [versions of the Predator Alert Tool for Twitter software will be tagged](https://github.com/meitar/pat-twitter/releases) when they are generally available. To update your facilitator to a specific version, first fetch the changes from the repository, check out the tagged version, and redeploy that code. For instance, to update your facilitator to a (hypothetical) version "0.6.3" you would do the following:
+
+    cd WHEREVER_YOU_INSTALLED_PAT_TWITTER_EARLIER
+    git fetch origin    # Get the latest changes.
+    git checkout 0.6.3  # Check out a specific version.
+    git push heroku     # Redeploy your app.
+
+Updates to the Predator Alert Tool for Twitter may include updates to the browser app (userscript) or the facilitator itself, so you will need to update your facilitator when either component is updated.
