@@ -53,8 +53,8 @@ You'll need to tell Twitter about your new facilitator by [creating a Twitter ap
 
 Once you have your app's API key and API secret from Twitter, you can install them into your Predator Alert Tool for Twitter facilitator by setting them as environment variables:
 
-    heroku config:set TWITTER_API_KEY=YOUR_API_KEY_HERE
-    heroku config:set TWITTER_API_SECRET=YOUR_API_SECRET_HERE
+    heroku config:set TWITTER_CONSUMER_KEY=YOUR_API_KEY_HERE
+    heroku config:set TWITTER_CONSUMER_SECRET=YOUR_API_SECRET_HERE
 
 Predator Alert Tool for Twitter ships with an extremely simple template called "default." Activate it as follows:
 
