@@ -2,6 +2,8 @@
 
 The Predator Alert Tool for Twitter is an add-on to your Web browser that enables you to subscribe to and view warnings about other Twitter users published by sources whose judgement you trust. It also enables you to create and optionally publish your own warnings, or "Predator Alerts," so you can share them with people who trust you.
 
+![Screenshot showing Predator Alert Tool for Twitter main user interface.](http://maymay.net/blog/wp-content/uploads/2014/05/predator-alert-tool-for-twitter-mockup.png)
+
 * **The Predator Alert Tool for Twitter integrates cleanly into Twitter’s own Web interface.** No separate app to use. Once installed, just use Twitter.com as you normally would.
 * You gain **two new types of lists** in addition to regular Twitter Lists: a “Twitter Blocklist” and any number of “warnlists.”
     * Your *Twitter Blocklist* shows you all of the Twitter users you’ve blocked in one place.
