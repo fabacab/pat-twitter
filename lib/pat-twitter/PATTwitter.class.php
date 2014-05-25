@@ -827,6 +827,16 @@ class PAT_Twitter {
                             $this->template->site_url('/'),
                             $raw_script_src
                         );
+                        $script_src = str_replace(
+                            '__PAT_TWITTER_CLIENT_NAMESPACE__',
+                            implode('.', array_reverse(explode('.', $_SERVER['HTTP_HOST']))),
+                            $script_src
+                        );
+                        $script_src = str_replace(
+                            '__PAT_TWITTER_CLIENT_INCLUDE_URL__',
+                            $this->template->site_url() . '/lib/pat-twitter/userscript',
+                            $script_src
+                        );
                         header('Content-Type: application/javascript');
                         print $script_src;
                     } else {
