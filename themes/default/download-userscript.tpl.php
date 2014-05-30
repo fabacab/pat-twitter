@@ -1,1 +1,0 @@
-<p>To activate warnlists, <a href="<?php $tpl->print_html($tpl->site_url('/'));?>/predator-alert-tool-for-twitter.user.js">download and install the Predator Alert Tool for Twitter in your browser</a>.</p>
