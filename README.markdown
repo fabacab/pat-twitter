@@ -60,6 +60,8 @@ Once you have your app's API key and API secret from Twitter, you can install th
     heroku config:set TWITTER_CONSUMER_KEY=YOUR_API_KEY_HERE
     heroku config:set TWITTER_CONSUMER_SECRET=YOUR_API_SECRET_HERE
 
+Be sure you also check the box labelled "Allow this application to sign in with Twitter" to enable [Sign in with Twitter](https://dev.twitter.com/docs/auth/sign-twitter). Also, in order to use some features of the Predator Alert Tool for Twitter facilitation server (such as the "Block users my friend blocks" function), you will need to grant your Twitter app "Read & write" [permissions](https://dev.twitter.com/docs/application-permission-model).
+
 Predator Alert Tool for Twitter ships with an extremely simple template called "default." Activate it as follows:
 
     heroku config:set PAT_TWITTER_THEME_FOLDER=default
