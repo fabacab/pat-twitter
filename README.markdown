@@ -39,6 +39,10 @@ If you use the [Google Chrome](https://chrome.google.com/) web browser (version 
 
 Note that while MySQL is theoretically supported (through PEAR's MDB2 database abstraction layer), I've done no testing for that configuration. Testers and patches are welcome.
 
+**OR**
+
+Try the [PAT Twitter facilitator WordPress plugin](https://wordpress.org/plugins/wp-pat-twitter), which does everything this code does, but should be easier to install for anyone familiar with how to install a WordPress plugin.
+
 ## Installing a facilitator
 
 The easiest way to set up your own Predator Alert Tool for Twitter facilitator is by deploying one to the Heroku cloud application platform. First, [ensure you have `git` installed](https://help.github.com/articles/set-up-git) on your computer. Then, [install the Heroku toolbelt](https://toolbelt.heroku.com/).
