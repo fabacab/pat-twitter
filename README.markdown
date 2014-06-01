@@ -84,11 +84,19 @@ Congratulations. You are now a Predator Alert Tool for Twitter facilitator. Shar
 
 ## Updating a facilitator when new Predator Alert Tool for Twitter versions are released
 
-New [versions of the Predator Alert Tool for Twitter software will be tagged](https://github.com/meitar/pat-twitter/releases) when they are generally available. To update your facilitator to a specific version, first fetch the changes from the repository, check out the tagged version, and redeploy that code. For instance, to update your facilitator to a (hypothetical) version "0.6.3" you would do the following:
+New [versions of the Predator Alert Tool for Twitter software will be tagged](https://github.com/meitar/pat-twitter/releases) when they are generally available.
+
+To update your facilitator to the latest available version:
 
     cd WHEREVER_YOU_INSTALLED_PAT_TWITTER_EARLIER
-    git fetch origin    # Get the latest changes.
-    git checkout 0.6.3  # Check out a specific version.
-    git push heroku     # Redeploy your app.
+    git pull origin master
+    git push heroku master
+
+To update your facilitator to a specific version, first fetch the changes from the repository, check out the tagged version, and redeploy that code. For instance, to update your facilitator to a (hypothetical) version "0.6.3" you would do the following:
+
+    cd WHEREVER_YOU_INSTALLED_PAT_TWITTER_EARLIER
+    git fetch origin             # Get the latest changes.
+    git checkout -b 0.6.3 0.6.3  # Check out a specific version on its own local branch.
+    git push heroku 0.6.3:master # Redeploy your app.
 
 Updates to the Predator Alert Tool for Twitter may include updates to the browser app (userscript) or the facilitator itself, so you will need to update your facilitator when either component is updated.
