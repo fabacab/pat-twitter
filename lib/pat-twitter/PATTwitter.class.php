@@ -17,7 +17,7 @@ require_once(dirname(__FILE__) . '/PATTwitterDatabase.class.php');
 //}
 
 class PAT_Twitter {
-    private $version = '0.1';
+    private $version = '0.1.1';
     private $echo_debug = false; //< Turn to true to show debug errors.
 
     private $db;     //< PEAR MDB2 database driver.
@@ -805,6 +805,29 @@ class PAT_Twitter {
                 }
                 if ('application/json' === $_SERVER['HTTP_ACCEPT']) {
                     header('Content-Type: application/json');
+                    print json_encode($tpl_vars);
+                    exit();
+                } else if ('export' === $_REQUEST['do']) {
+                    header('Content-Type: application/json');
+                    header('Content-Disposition: attachment; filename=PAT-List-' . urlencode($tpl_vars['list_info']->list_name) . '.json');
+                    // Construct expected JSON object.
+                    unset($tpl_vars['my_twitter_blocklist_id']);
+                    $tpl_vars['local_key'] = $tpl_vars['list_info']->list_name . '_' . $tpl_vars['list_info']->author->twitter_id;
+                    $tpl_vars['data'] = $tpl_vars['list_info'];
+                    unset($tpl_vars['list_info']);
+                    $tpl_vars['data']->visibility = 'public';
+                    $horcrux = new stdClass();
+                    $horcrux->server_url = $this->template->site_url('/');
+                    $horcrux->list_name = $tpl_vars['data']->list_name;
+                    $horcrux->id = $_GET['id'];
+                    $tpl_vars['data']->horcruxes = array($horcrux);
+                    $tmp = new stdClass();
+                    foreach ($tpl_vars['listed_users'] as $user) {
+                        $twitter_id = $user->twitter_id;
+                        $tmp->$twitter_id = $user;
+                    }
+                    unset($tpl_vars['listed_users']);
+                    $tpl_vars['listed_users'] = $tmp;
                     print json_encode($tpl_vars);
                     exit();
                 } else {
