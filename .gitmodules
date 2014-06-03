@@ -7,3 +7,6 @@
 [submodule "lib/pat-twitter/Parsedown"]
 	path = lib/pat-twitter/Parsedown
 	url = https://github.com/erusev/parsedown.git
+[submodule "docs"]
+	path = docs
+	url = https://github.com/meitar/pat-twitter.wiki.git
