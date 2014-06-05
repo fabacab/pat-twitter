@@ -17,7 +17,7 @@ require_once(dirname(__FILE__) . '/PATTwitterDatabase.class.php');
 //}
 
 class PAT_Twitter {
-    private $version = '0.1.1';
+    private $version = '0.1.3';
     private $echo_debug = false; //< Turn to true to show debug errors.
 
     private $db;     //< PEAR MDB2 database driver.
