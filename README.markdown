@@ -8,7 +8,7 @@ The Predator Alert Tool for Twitter is an add-on to your Web browser that enable
 * You gain **two new types of lists** in addition to regular Twitter Lists: a “Twitter Blocklist” and any number of “warnlists.”
     * Your *Twitter Blocklist* shows you all of the Twitter users you’ve blocked in one place.
     * Your *warnlists* are where you publish your “Predator Alerts” and where you subscribe to Predator Alerts from others. If a tweet shows in any of your timelines from a user who is on a warnlist you’ve subscribed to, their tweet gets “redboxed.” In infamous Predator Alert Tool style, click through to that user’s profile to read details of each alert published about that user.
-* Unlike regular Twitter Lists, **Twitter users can not remove themselves from Predator Alert Tool warnlists that you add them to**, and taking a page from [Predator Alert Tool for Facebook](https://github.com/meitar/pat-facebook/#readme)'s book, you can add users you have blocked or users who have blocked you to warnlists that you make.
+* Unlike regular Twitter Lists, **Twitter users can not remove themselves from Predator Alert Tool warnlists that you add them to**, and taking a page from [Predator Alert Tool for Facebook](https://github.com/fabacab/pat-facebook/#readme)'s book, you can add users you have blocked or users who have blocked you to warnlists that you make.
 * **Subscribe to alerts from sources you trust.** You always have the final say; as a fully decentralized system, [unlike the Block Bot](http://days.maybemaimed.com/post/76147235230/brainstorm-predator-alert-tool-for-craigslist), this system offers no ability for others to moderate what you publish and thus it has a vastly reduced vulnerability to corruption by social cliques and their inevitable groupthink.
 
 ## Overview
@@ -49,7 +49,7 @@ The easiest way to set up your own Predator Alert Tool for Twitter facilitator i
 
 Next, [clone](http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository) the Predator Alert Tool for Twitter repository and [create a new Heroku app](https://devcenter.heroku.com/articles/creating-apps):
 
-    git clone https://github.com/meitar/pat-twitter.git
+    git clone https://github.com/fabacab/pat-twitter.git
     cd pat-twitter
     heroku apps:create
 
@@ -80,11 +80,11 @@ Finally, [deploy your app to Heroku](https://devcenter.heroku.com/articles/git#d
 
 You can navigate to your app by using the `heroku open` command. This should open your default browser and present you with a login screen.
 
-Congratulations. You are now a Predator Alert Tool for Twitter facilitator. Share the URL of your app with anyone you want to and [encourage them to break the silence around and cycle of abuse](https://github.com/meitar/pat-facebook/wiki/How-to-help).
+Congratulations. You are now a Predator Alert Tool for Twitter facilitator. Share the URL of your app with anyone you want to and [encourage them to break the silence around and cycle of abuse](https://github.com/fabacab/pat-facebook/wiki/How-to-help).
 
 ## Updating a facilitator when new Predator Alert Tool for Twitter versions are released
 
-New [versions of the Predator Alert Tool for Twitter software will be tagged](https://github.com/meitar/pat-twitter/releases) when they are generally available.
+New [versions of the Predator Alert Tool for Twitter software will be tagged](https://github.com/fabacab/pat-twitter/releases) when they are generally available.
 
 To update your facilitator to the latest available version:
 
